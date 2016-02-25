@@ -21,7 +21,7 @@ int main(int argc, char** argv) {
     int number;
     
     
-    cout<<"Hello World"<<endl;
+    cout<<"Hello world"<<endl;
     
 
     return 0;
