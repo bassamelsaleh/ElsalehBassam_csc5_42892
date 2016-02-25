@@ -49,14 +49,7 @@ int main(int argc, char** argv) {
     cout<< "the approximate number of consumers who purchase energy drinks is "<<edcon<<endl;//announcing the number of consumers who buy their energy drinks from the survey
     cout<<"of those "<<cfcon<<" prefer citrus-flavored energy drinks"<<endl;////announce the outcome of results 
     
-    
-    cout<<"_"<<endl;//make a space between problems 
-    
-    cout<<"problem 1"<< endl; //problem 1 in Gaddis chapter 2
-    int sum;// set sum as a variable  
-    sum = 50+100;//give value to variable sum
-    cout<<"the sum of 50+100="<<sum<<endl;//Display results 
-    
+     
     
     cout<<"-"<<endl;// make space between problems 
     
