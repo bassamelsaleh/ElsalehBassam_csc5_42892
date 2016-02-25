@@ -19,7 +19,7 @@ using namespace std;
  * 
  */
 int main(int argc, char** argv) {
-        cout<<"problem 15"<<endl; // problem 15 in Gaddis chapter 2
+    cout<<"problem 15"<<endl; // problem 15 in Gaddis chapter 2
     cout<<"   *"<<endl; //will show a star on the top center
     cout<<"  ***"<<endl;// 3 starts will appear 
     cout<<" *****"<<endl;// 5 stars will appear

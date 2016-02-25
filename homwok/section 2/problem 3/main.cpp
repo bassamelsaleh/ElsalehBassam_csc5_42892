@@ -19,7 +19,7 @@ using namespace std;
  * 
  */
 int main(int argc, char** argv) {
-        cout<<"problem 3"<<endl; //problem 2 in Gaddis chapter 2
+    cout<<"problem 3"<<endl; //problem 2 in Gaddis chapter 2
     float staTx, counTx, sale;//state tax, country tax, what is the purchase 
     staTx = 0.04;//state tax =4%
     counTx = 0.02;//country tax = 2%

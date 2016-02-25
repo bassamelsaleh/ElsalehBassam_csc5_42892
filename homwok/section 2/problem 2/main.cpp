@@ -19,7 +19,7 @@ using namespace std;
  * 
  */
 int main(int argc, char** argv) {
-        cout<<"problem 2"<<endl; //problem 2 in Gaddis chapter 2
+    cout<<"problem 2"<<endl; //problem 2 in Gaddis chapter 2
     float yrsal, persal, gen;// sale this year, percent of total sales, generated income
     yrsal = 8.6e9;//set year sale in dollars 
     persal = 0.58;//set percent of total sales

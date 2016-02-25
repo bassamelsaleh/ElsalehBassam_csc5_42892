@@ -20,9 +20,12 @@ using namespace std;
  */
 int main(int argc, char** argv) {
      cout<<"problem 1"<< endl; //problem 1 in Gaddis chapter 2
-    int sum;// set sum as a variable  
-    sum = 50+100;//give value to variable sum
-    cout<<"the sum of 50+100="<<sum<<endl;//Display results 
+    short int sum, a, b;// set sum as a variable, have a variable a, have a variable b
+    a = 50;//assign value to a
+    b = 100;//assign value to b
+        
+    sum = a+b;//give value to variable sum
+    cout<<"the sum of "<<a<<"+"<<b<<"="<<sum<<endl;//Display results 
 
     return 0;
 }

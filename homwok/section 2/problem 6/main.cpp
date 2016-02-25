@@ -19,7 +19,7 @@ using namespace std;
  * 
  */
 int main(int argc, char** argv) {
-        cout<<"problem 6"<<endl; //problem 6 in Gaddis chapter 2
+    cout<<"problem 6"<<endl; //problem 6 in Gaddis chapter 2
     short int payAmt, payPir, anPay;//Pay amount, pay periods, annual pay  
     payAmt = 2200.0;// the income received  per income in dollars 
     payPir = 26;//how many pay periods their are
