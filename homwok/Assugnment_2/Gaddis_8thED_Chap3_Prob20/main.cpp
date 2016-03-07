@@ -23,9 +23,9 @@ int main(int argc, char** argv) {
     diam= 12;
     
     //calculate
-    area = PI*(diam*diam)/4;
+    area = (PI*(diam*diam))/4;
     slice = static_cast<int>(area)/static_cast<int>(sarea);
-    
+    cout<<"everyone get "<<slice<<" pizza slices"<<endl;
             
 
     return 0;
