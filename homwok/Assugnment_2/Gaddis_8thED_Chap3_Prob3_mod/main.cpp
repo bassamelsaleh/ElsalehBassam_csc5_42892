@@ -1,7 +1,7 @@
 /* 
  * Author: Bassam Elsaeh
  * Created on February 29, 2016, 9:49 AM
- * purpose: Treadmill Readout Conversion
+ * purpose: Temperature conversion 
  */
 
 // System Libraries

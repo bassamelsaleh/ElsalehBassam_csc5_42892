@@ -1,8 +1,7 @@
 /* 
- * File:   main.cpp
  * Author: Bassam
- *
- * Created on March 11, 2016, 11:18 AM
+ * March 11, 2016
+ * buying seats
  */
 #include <iostream>
 #include <iomanip>

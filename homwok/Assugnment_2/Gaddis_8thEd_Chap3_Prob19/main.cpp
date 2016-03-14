@@ -1,6 +1,7 @@
 /* 
  * Author: Bassam Elsaleh
  * 3/7/2016
+ * purpose: Loan
  */
 
 #include <iostream>
@@ -15,7 +16,7 @@ using namespace std;
 int main(int argc, char** argv) {
     //declare variables
     int  loan;
-    float mPay, rate,payment, top, bot, temp, chB;
+    float mPay, rate, payment, top, bot, temp, chB;
     
     //Input variables
     loan = 10000;
