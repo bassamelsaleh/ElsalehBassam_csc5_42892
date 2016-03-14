@@ -18,23 +18,28 @@ int main(int argc, char** argv) {
     bool x;
     bool y;
     
-    //input results
-    cout<<"input value true=1 or false=0 for x."<<endl;
-    cin>>x;
-    cout<<"input value true=1 or false=0 for y."<<endl;
-    cin>>y;
-    
     //output results
     cout<<"X   Y   !X   !Y   x&&y   x||y   x^y   x^y^y   x^y^x   !(x&&y)   !x||!y   !(x||y)   !x&&!y"<<endl;
     
-    //output results with input that user inputed,
+    //output results with input that user inputed
+    x=1;
+    y=1;
     if(x==true,y==true)
         cout<<(x?'T':'F')<<setw(4)<<(y?'T':'F')<<setw(4)<<(!x?'T':'F')<<setw(5)<<(!y?'T':'F')<<setw(6)<<(x&&y?'T':'F')<<setw(7)<<(x||y?'T':'F')<<setw(7)<<(x^y?'T':'F')<<setw(7)<<(x^y^y?'T':'F')<<setw(7)<<(x^y^x?'T':'F')<<setw(10)<<(!(x&&y)?'T':'F')<<setw(10)<<(!x||!y?'T':'F')<<setw(10)<<(!(x||y)?'T':'F')<<setw(10)<<(!x&&!y?'T':'F')<<endl;
-    else if (x==true,y==false)
+    
+    x=1;
+    y=0;
+    if (x==true,y==false)
         cout<<(x?'T':'F')<<setw(4)<<(y?'T':'F')<<setw(4)<<(!x?'T':'F')<<setw(5)<<(!y?'T':'F')<<setw(6)<<(x&&y?'T':'F')<<setw(7)<<(x||y?'T':'F')<<setw(7)<<(x^y?'T':'F')<<setw(7)<<(x^y^y?'T':'F')<<setw(7)<<(x^y^x?'T':'F')<<setw(10)<<(!(x&&y)?'T':'F')<<setw(10)<<(!x||!y?'T':'F')<<setw(10)<<(!(x||y)?'T':'F')<<setw(10)<<(!x&&!y?'T':'F')<<endl;
-    else if (x==false,y==true)
+    
+    x=0;
+    y=1;
+    if (x==false,y==true)
         cout<<(x?'T':'F')<<setw(4)<<(y?'T':'F')<<setw(4)<<(!x?'T':'F')<<setw(5)<<(!y?'T':'F')<<setw(6)<<(x&&y?'T':'F')<<setw(7)<<(x||y?'T':'F')<<setw(7)<<(x^y?'T':'F')<<setw(7)<<(x^y^y?'T':'F')<<setw(7)<<(x^y^x?'T':'F')<<setw(10)<<(!(x&&y)?'T':'F')<<setw(10)<<(!x||!y?'T':'F')<<setw(10)<<(!(x||y)?'T':'F')<<setw(10)<<(!x&&!y?'T':'F')<<endl;
-    else if (x==false,y==false)
+    
+    x=0;
+    y=0;
+    if (x==false,y==false)
         cout<<(x?'T':'F')<<setw(4)<<(y?'T':'F')<<setw(4)<<(!x?'T':'F')<<setw(5)<<(!y?'T':'F')<<setw(6)<<(x&&y?'T':'F')<<setw(7)<<(x||y?'T':'F')<<setw(7)<<(x^y?'T':'F')<<setw(7)<<(x^y^y?'T':'F')<<setw(7)<<(x^y^x?'T':'F')<<setw(10)<<(!(x&&y)?'T':'F')<<setw(10)<<(!x||!y?'T':'F')<<setw(10)<<(!(x||y)?'T':'F')<<setw(10)<<(!x&&!y?'T':'F')<<endl;
     
         
