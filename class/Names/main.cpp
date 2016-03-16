@@ -32,29 +32,44 @@ int main(int argc, char** argv) {
         if (strcmp(c,b)==0)
         cout<<a<<". "<<b<<". "<<c<<endl;
     }
-    else if (strcmp(a, b)< 0)
+    
+    else if (strcmp(a, b)< 0 && strcmp(b,c)<0 && strcmp(a, c)< 0 )
     {
-        if(strcmp(b,c)<0)
-        cout<<a<<". "<<b<<". "<<c<<endl;
-        else if (strcmp(c,b)<0)
+        cout<<a<<". "<<b<<". "<<c<<endl; 
+    }
+    else if (strcmp(a, b)< 0 && strcmp(c,b)<0 && strcmp(a, c)< 0 )
+    {
             cout<<a<<". "<<c<<". "<<b<<endl;
     }
-    else if (strcmp(b,a)<0)
+    
+    else if (strcmp(b, a)< 0 && strcmp(a,c)<0 && strcmp(b, c)< 0 )
     {
-        if(strcmp(a,c)<0)
-        cout<<b<<". "<<a<<". "<<c<<endl;
-        else if (strcmp(c,a)<0)
+        cout<<b<<". "<<a<<". "<<c<<endl; 
+    }
+    else if (strcmp(b, a)< 0 && strcmp(c,a)<0 && strcmp(b, c)< 0 )
+    {
             cout<<b<<". "<<c<<". "<<a<<endl;
     }
-        else if (strcmp(c,a))
-        {
-            if(strcmp(a,b)<0)
-        cout<<c<<". "<<a<<". "<<b<<endl;
-        else if (strcmp(b,a)<0)
-            cout<<c<<". "<<b<<". "<<a<<endl;
-        }
     
-
+    else if (strcmp(c, b)< 0 && strcmp(b,a)<0 && strcmp(c, a)< 0 )
+    {
+        cout<<c<<". "<<b<<". "<<a<<endl; 
+    }
+    else if (strcmp(c, b)< 0 && strcmp(a,b)<0 && strcmp(c, a)< 0 )
+    {
+            cout<<c<<". "<<a<<". "<<b<<endl;
+    }
+    
+    else if (strcmp(c, a)< 0 && strcmp(b,a)<0 && strcmp(c, b)< 0 )
+    {
+        cout<<c<<". "<<b<<". "<<a<<endl; 
+    }
+    else if (strcmp(c, a)< 0 && strcmp(a,b)<0 && strcmp(c, b)< 0 )
+    {
+            cout<<c<<". "<<a<<". "<<b<<endl;
+    }
+    
+    
     
     //output the results
     
