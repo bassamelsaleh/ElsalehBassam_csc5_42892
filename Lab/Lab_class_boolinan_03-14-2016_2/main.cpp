@@ -18,6 +18,7 @@ int main(int argc, char** argv) {
     bool x;
     bool y;
     
+    
     //output results
     cout<<"X   Y   !X   !Y   x&&y   x||y   x^y   x^y^y   x^y^x   !(x&&y)   !x||!y   !(x||y)   !x&&!y"<<endl;
     
