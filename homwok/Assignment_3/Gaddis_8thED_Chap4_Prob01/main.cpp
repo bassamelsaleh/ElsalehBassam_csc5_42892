@@ -1,21 +1,24 @@
 /* 
- * File:   main.cpp
- * Author: rcc
- *
- * Created on March 21, 2016, 9:24 AM
+ * Author: Bassam Elsaleh
+ * March 21, 2016
+ * purpose- enter the number
  */
 
+//System Libraries
 #include <iostream>
 #include <cmath>
-
 using namespace std;
 
-//user libraries
+//User Libraries
 
 //Global Constants
+
+//Function Prototypes
+
+//Execution Begins Here
 int main(int argc, char** argv) {
     //input values
-    int a, b;
+    float a, b;
     cout<<"Input value A"<<endl;
     cin>>a;
     cout<<"Input value B"<<endl;
