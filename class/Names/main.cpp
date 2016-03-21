@@ -35,10 +35,12 @@ int main(int argc, char** argv) {
     
     else if (strcmp(a, b)< 0 && strcmp(b,c)<0 && strcmp(a, c)< 0 )
     {
+        //alphabetically  input a comes first then input b than input c
         cout<<a<<". "<<b<<". "<<c<<endl; 
     }
     else if (strcmp(a, b)< 0 && strcmp(c,b)<0 && strcmp(a, c)< 0 )
     {
+        //alphabetically  input a comes first then input c than input b
             cout<<a<<". "<<c<<". "<<b<<endl;
     }
     
