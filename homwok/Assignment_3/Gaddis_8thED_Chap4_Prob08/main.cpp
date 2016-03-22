@@ -21,19 +21,24 @@ using namespace std;
 int main(int argc, char** argv) {
     string a;
     string b;
-    cout<<"input 2 primary colors."<<endl;
+    cout<<"input first primary colors."<<endl;
     getline(cin, a);
     cout<<"input second primary color"<<endl;
     getline(cin, b);
-    cout<<a<<" "<<b<<endl;
     
     if ((a == "red" && b == "blue")  || (b == "red" && a == "blue")){
         cout<<"your color is Purple"<<endl;
     }
-    if ((a == "red" && b == "yellow")  || (b == "red" && a == "yellow")){
+    else if ((a == "red" && b == "yellow")  || (b == "red" && a == "yellow")){
         cout<<"your color is orange"<<endl;
     }
-   
+    else if ((a == "blue" && b == "yellow")  || (b == "blue" && a == "yellow")){
+        cout<<"your color is green"<<endl;
+    }
+    else
+        cout<<"you did not input a primary color"<<endl;
+    
+    
     return 0;
 }
 
