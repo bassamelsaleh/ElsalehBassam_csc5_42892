@@ -19,6 +19,7 @@ using namespace std;
 //Execution Begins Here
 
 int main(int argc, char** argv) {
+    //declare variables
     string a;
     string b;
     cout<<"input first primary colors."<<endl;

@@ -17,7 +17,7 @@ using namespace std;
 
 //Execution Begins Here
 int main(int argc, char** argv) {
-    //declare veriables
+    //declare variables
     int num;
     cout<<"Input the number (1-10) you want to convert to a numeral."<<endl;
     cin>>num;
