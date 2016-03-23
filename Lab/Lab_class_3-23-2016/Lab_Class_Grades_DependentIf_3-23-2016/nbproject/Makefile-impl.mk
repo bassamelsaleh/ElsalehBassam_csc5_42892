@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=Menu
+PROJECTNAME=Lab_Class_Grades_DependentIf_3-23-2016
 
 # Active Configuration
 DEFAULTCONF=Debug
