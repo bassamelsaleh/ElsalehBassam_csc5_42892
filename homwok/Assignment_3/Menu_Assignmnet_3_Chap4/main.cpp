@@ -1,12 +1,19 @@
 /* 
  * File:   main.cpp
- * Author: Dr. Mark E. Lehr
+ * Author: Bassam Elsaleh
  * Purpose:  To Illustrate the code for
  * developing a menu
- * Problem 1 -> Sum the numbers between 1 and 10
- * Problem 2 -> Multiply the numbers between 1 and 10
- * Problem 3 -> Divide the numbers between 1 and 10
- * Modified on Mar 21st, 2016
+ * Problem 1 -> Less than or Greater than
+ * Problem 2 -> Roman numeral
+ * Problem 3 -> Magical date
+ * Problem 4 -> Comparing Rectangles 
+ * Problem 5 -> BMI
+ * Problem 6 -> Mass to Weight
+ * Problem 7 -> Seconds to min, hrs, days
+ * Problem 8 -> Mixing colors
+ * Problem 9 -> Make a Dollar
+ * Problem 11 -> Math Problems
+ * Mar 24st, 2016
  */
 
 //System Libraries
@@ -270,75 +277,75 @@ int main(int argc, char** argv) {
 
                 break;
             }
-            case 9:{//Character '3' in Hex
-                //declare variables
-    float pen, nick, dim, qu, p, n, d, q, tot;
-    
-    //input values
-    cout<<"Enter the amount of change that will make a dollar"<<endl;
-    cout<<"Enter the number of pennies."<<endl;
-    cin>>pen;
-    cout<<"Enter the number of nickels."<<endl;
-    cin>>nick;
-    cout<<"Enter the number of dimes."<<endl;
-    cin>>dim;
-    cout<<"Enter the number of quarters."<<endl;
-    cin>>qu;
-    
-    //calculations
-    p = pen*0.01f;
-    n = nick*0.05f;
-    d = dim*0.1f;
-    q = qu*0.25f;
-    tot = q+d+n+p;
-    
-    //output
-    if (tot < 1){
-        cout<<"You are under one dollar."<<endl;
-    }
-    else if (tot == 1){
-        cout<<"Congrats you hit one dollar."<<endl;
-    }
-    else{
-        cout<<"yYou are over one dollar."<<endl;
-    }
+            case 9:{
+                    //declare variables
+                    float pen, nick, dim, qu, p, n, d, q, tot;
+
+                    //input values
+                    cout<<"Enter the amount of change that will make a dollar"<<endl;
+                    cout<<"Enter the number of pennies."<<endl;
+                    cin>>pen;
+                    cout<<"Enter the number of nickels."<<endl;
+                    cin>>nick;
+                    cout<<"Enter the number of dimes."<<endl;
+                    cin>>dim;
+                    cout<<"Enter the number of quarters."<<endl;
+                    cin>>qu;
+
+                    //calculations
+                    p = pen*0.01f;
+                    n = nick*0.05f;
+                    d = dim*0.1f;
+                    q = qu*0.25f;
+                    tot = q+d+n+p;
+
+                    //output
+                    if (tot < 1){
+                        cout<<"You are under one dollar."<<endl;
+                    }
+                    else if (tot == 1){
+                        cout<<"Congrats you hit one dollar."<<endl;
+                    }
+                    else{
+                        cout<<"yYou are over one dollar."<<endl;
+                    }
                 break;
             }
-            case 10:{//Character '3' in Hex
-                //constants
-    const int min=0;
-    const int max=1000;
-    //declare variables
-    int a;
-    int b;
-    int tot;
-    int ans;
-    
-    //get the system time.
-    unsigned seed = time(0);
-    
-    //seed the random number generator.
-    srand(seed);
-    
-    //get random numbers to solve
-    a = (rand()%(max-min+1))+min;
-    b = (rand()%(max-min+1))+min;
-    cout<<a<<endl;
-    cout<<b<<endl;
-    
-    //calculation
-    tot = a+b;
-    
-    cout<<"Enter your answer here"<<endl;
-    cin>>ans;
-    
-    if (ans == tot){
-        cout<<"congrats, you entered that correct answer. "<<tot<<endl; 
-    }
-    else{
-        cout<<"sorry, the answer was "<<tot
-                <<" and you answered "<<ans<<endl;
-    }
+            case 10:{
+                    //constants
+                    const int min=0;
+                    const int max=1000;
+                    //declare variables
+                    int a;
+                    int b;
+                    int tot;
+                    int ans;
+
+                    //get the system time.
+                    unsigned seed = time(0);
+
+                    //seed the random number generator.
+                    srand(seed);
+
+                    //get random numbers to solve
+                    a = (rand()%(max-min+1))+min;
+                    b = (rand()%(max-min+1))+min;
+                    cout<<a<<endl;
+                    cout<<b<<endl;
+
+                    //calculation
+                    tot = a+b;
+
+                    cout<<"Enter your answer here"<<endl;
+                    cin>>ans;
+
+                    if (ans == tot){
+                        cout<<"congrats, you entered that correct answer. "<<tot<<endl; 
+                    }
+                    else{
+                        cout<<"sorry, the answer was "<<tot
+                                <<" and you answered "<<ans<<endl;
+                    }
                 break;
             }
             default:{
