@@ -1,14 +1,9 @@
 /* 
  * File:   main.cpp
- * Author: Dr. Mark E. Lehr
- * Purpose:  To Illustrate the code for
- * developing a menu
- * Problem 1 -> Sum the numbers between 1 and 10
- * Problem 2 -> Multiply the numbers between 1 and 10
- * Problem 3 -> Divide the numbers between 1 and 10
- * Modified on Mar 21st, 2016
- */
-
+ * Author: Bassam Elsaleh
+ * Purpose:  To Illustrate the rule of 72 by while loop
+ * Mar 28, 2016
+*/
 //System Libraries
 #include <iostream>
 using namespace std;
