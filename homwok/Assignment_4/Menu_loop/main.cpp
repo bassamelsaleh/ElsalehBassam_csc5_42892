@@ -136,7 +136,7 @@ int main(int argc, char** argv) {
                 cin>>mph;
                 cout<<"How many hours has it traveled?";
                 cin>>hrs;
-                if(hrs==0){
+                if(hrs==0 || mph==0){
                     cout<<"You haven't traveled any distance"<<endl;
                 }
                 else{
@@ -154,6 +154,7 @@ int main(int argc, char** argv) {
                 }
                 }
                 break;
+                
             }
             case 6:{//problem 07
                 //Declare variables
@@ -426,6 +427,6 @@ int main(int argc, char** argv) {
                     cout<<"Exit?"<<endl;
             }
     };
-}while (choice <= 10);
+}while (choice <= 10 && choice >=1);
     return 0;
 }

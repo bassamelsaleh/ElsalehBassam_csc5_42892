@@ -26,7 +26,7 @@ int main(int argc, char** argv) {
     cin>>mph;
     cout<<"How many hours has it traveled?";
     cin>>hrs;
-    if(hrs==0){
+    if(hrs==0 || mph==0){
         cout<<"You haven't traveled any distance"<<endl;
     }
     else{
@@ -38,9 +38,6 @@ int main(int argc, char** argv) {
         D=mph*a;
         cout<<setprecision(2)<<fixed;
         cout<<setw(2)<<a<<setw(15)<<D<<endl;
-    }
-    if(hrs==0){
-        cout<<"You haven't traveled any distance"<<endl;
     }
     }
     return 0;
