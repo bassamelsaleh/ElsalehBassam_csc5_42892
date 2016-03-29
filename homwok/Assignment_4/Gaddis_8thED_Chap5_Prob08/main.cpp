@@ -1,13 +1,14 @@
 /* 
  * Author: Bassam Elsaleh
  * March 21, 2016
- * purpose- pennies for pay
+ * purpose- Math Tutor
  */
 
 //System Libraries
 #include <iostream>
 #include <cstdlib>  //for rand and srand
 #include <ctime>    //for hte time function
+#include <cmath>
 using namespace std;
 
 //User Libraries
@@ -25,6 +26,7 @@ int main(int argc, char** argv) {
     float tot;
     float ans;
     int choice;
+    float tal;
     //constants
     const int min=0;
     const int max=200;
@@ -58,10 +60,15 @@ int main(int argc, char** argv) {
 
                 cout<<"Enter your answer here"<<endl;
                 cin>>ans;
-                cout<<"The answer was "<<tot
-                            <<" and you answered "<<ans<<endl; 
                 
-         
+                if(tot==ans){
+
+                 cout<<"Correct, The answer is "<<tot
+                            <<" and you answered "<<ans<<endl; 
+                }
+                else {
+                    cout<<"sorry the answer is "<<tot<<endl;
+                }
             
                 break;
             }
@@ -78,9 +85,14 @@ int main(int argc, char** argv) {
 
                 cout<<"Enter your answer here"<<endl;
                 cin>>ans;
-                cout<<"The answer was "<<tot
+                if(tot==ans){
+
+                cout<<"Correct, The answer is "<<tot
                             <<" and you answered "<<ans<<endl; 
-                
+                }
+                else {
+                    cout<<"sorry the answer is "<<tot<<endl;
+                }
                         
      break;
             }
@@ -95,12 +107,19 @@ int main(int argc, char** argv) {
                 //calculation
                 tot = a/b;
 
-                cout<<"Enter your answer here"<<endl;
+                cout<<"Enter your answer here (up to 3 decimal places)"<<endl;
                 cin>>ans;
-
-                 cout<<"The answer was "<<tot
-                            <<" and you answered "<<ans<<endl; 
                 
+                tal=abs(tot-ans);// make tolerance for division
+                
+                if(tal<0.009){
+
+                 cout<<"Correct, The answer is "<<tot
+                            <<" and you answered "<<ans<<endl; 
+                }
+                else {
+                    cout<<"sorry the answer is "<<tot<<endl;
+                }
             
      break;
          }
@@ -119,8 +138,14 @@ int main(int argc, char** argv) {
                     cin>>ans;
 
                    
-                    cout<<"The answer was "<<tot
+                    if(tot==ans){
+
+                 cout<<"Correct, The answer is "<<tot
                             <<" and you answered "<<ans<<endl; 
+                }
+                else {
+                    cout<<"sorry the answer is "<<tot<<endl;
+                } 
                 
                     
          break;

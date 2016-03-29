@@ -1,12 +1,13 @@
 /* 
  * Author: Bassam Elsaleh
  * March 21, 2016
- * purpose- Budget Analysis
+ * purpose- Random Number Guessing Game
  */
 
 //System Libraries
 #include <iostream>
-#include <iomanip>
+#include <cstdlib>  //for rand and srand
+#include <ctime>    //for hte time function
 using namespace std;
 
 //User Libraries
@@ -18,41 +19,31 @@ using namespace std;
 //Execution Begins Here
 int main(int argc, char** argv) {
     //Declare variables
-    int mon=0;//monthly budget
-    int bud;
-    int time=1;//time for the year
-    int pay;//expenses
+    int gues;
+    float a;
+    //constants
+    const int min=0;
+    const int max=20;
     
+    //get the system time.
+    unsigned seed = time(0);
     
-    //information
-    cout<<"How much will you out in your budget per month"<<endl;
-    cin>>bud;
+    //seed the random number generator.
+    srand(seed);
+    a = (rand()%21)+min;
+    cout<<"What number am I thinking of between 0 and 20?"<<endl;
     
     //loop to get calculations
     do{
-        cout<<"what are your expenses for the month"<<endl;
-        cin>>pay;
-        mon=mon-pay+bud;
-        //display
-    cout<<"Month    Budget"<<endl;
-        cout<<setprecision (2)<<fixed;
-        cout<<setw(2)<<time<<setw(8)<<"$"<<mon<<endl;
-        time++;
-        
-        
-    }while (time<=12);
-    
-    //Display their yearly budget
-    cout<<"At the end of the year, "<<endl;
-    if (mon<0){
-        cout<<"you went over by $"<<mon<<endl;       
-    }
-    else if (mon>0){
-        cout<<"you have saved $"<<mon<<endl;
-    }
-    else{
-        cout<<"you broke even"<<endl;
-    }
+        cin>>gues;
+        if (gues>a){
+            cout<<"your guess was to high."<<endl;
+        }
+        else if (gues<a){
+            cout<<"your guess was to low."<<endl;
+        }
+    }while (gues!=a);
+    cout<<"Congrats, you found out the number i was thinking of."<<endl;
     return 0;
 }
 

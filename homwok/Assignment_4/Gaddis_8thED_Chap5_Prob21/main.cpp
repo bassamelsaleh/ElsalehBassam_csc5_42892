@@ -1,7 +1,7 @@
 /* 
  * Author: Bassam Elsaleh
  * March 21, 2016
- * purpose- Random Number Guessing Game
+ * purpose- Random Number Guessing Game Enhancement
  */
 
 //System Libraries
@@ -21,6 +21,7 @@ int main(int argc, char** argv) {
     //Declare variables
     int gues;
     float a;
+    int count;
     //constants
     const int min=0;
     const int max=20;
@@ -36,6 +37,7 @@ int main(int argc, char** argv) {
     //loop to get calculations
     do{
         cin>>gues;
+        count++;
         if (gues>a){
             cout<<"your guess was to high."<<endl;
         }
@@ -43,7 +45,7 @@ int main(int argc, char** argv) {
             cout<<"your guess was to low."<<endl;
         }
     }while (gues!=a);
-    cout<<"Congrats, you found out the number i was thinking of."<<endl;
+    cout<<"Congrats, you found out the number i was thinking of. It took you "<<count<<" times."<<endl;
     return 0;
 }
 
