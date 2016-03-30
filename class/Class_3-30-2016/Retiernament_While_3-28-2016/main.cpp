@@ -18,7 +18,7 @@ using namespace std;
 //Execution Begins Here
 int main(int argc, char** argv) {
      //declare variables
-    float salary=300;//$60,000
+    float salary=6e4f;//$60,000
     float percDep=1e-1f;//10% to save each year
     float pv = 0.0f;//present value
     float iRate = 0.05f;//interest rate
