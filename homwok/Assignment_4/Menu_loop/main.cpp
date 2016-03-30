@@ -55,8 +55,10 @@ int main(int argc, char** argv) {
                     //Declare variables
                     int num;
                     int ans;
+                    int a;
                     cout<<"Enter a positive integer"<<endl;
-                    cin>>num;
+                    cin>>a;
+                    num=a;
                     //set ans to 0 to have a given value
                     ans=0;
                     //loop to get calculations
@@ -66,7 +68,7 @@ int main(int argc, char** argv) {
                         num--;
 
                     }while(num>0);
-                    cout<<"The sum of all integers from 50 to 1 is ="<<ans<<endl;
+                    cout<<"The sum of all integers from "<<a<<" to 1 is ="<<ans<<endl;
                 break;
             }
             case 2:{//problem 03
@@ -332,7 +334,7 @@ int main(int argc, char** argv) {
 
 
                 //information
-                cout<<"How much will you out in your budget per month"<<endl;
+                cout<<"How much will you put in your budget per month"<<endl;
                 cin>>bud;
 
                 //loop to get calculations
