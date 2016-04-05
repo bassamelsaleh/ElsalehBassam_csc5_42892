@@ -7,21 +7,21 @@ CND_BASEDIR=`pwd`
 CND_BUILDDIR=build
 CND_DISTDIR=dist
 # Debug configuration
-CND_PLATFORM_Debug=Cygwin_4.x-Windows
-CND_ARTIFACT_DIR_Debug=dist/Debug/Cygwin_4.x-Windows
+CND_PLATFORM_Debug=Cygwin-Windows
+CND_ARTIFACT_DIR_Debug=dist/Debug/Cygwin-Windows
 CND_ARTIFACT_NAME_Debug=gadiss_chaper5_problem22_extra
-CND_ARTIFACT_PATH_Debug=dist/Debug/Cygwin_4.x-Windows/gadiss_chaper5_problem22_extra
-CND_PACKAGE_DIR_Debug=dist/Debug/Cygwin_4.x-Windows/package
+CND_ARTIFACT_PATH_Debug=dist/Debug/Cygwin-Windows/gadiss_chaper5_problem22_extra
+CND_PACKAGE_DIR_Debug=dist/Debug/Cygwin-Windows/package
 CND_PACKAGE_NAME_Debug=gadisschaper5problem22extra.tar
-CND_PACKAGE_PATH_Debug=dist/Debug/Cygwin_4.x-Windows/package/gadisschaper5problem22extra.tar
+CND_PACKAGE_PATH_Debug=dist/Debug/Cygwin-Windows/package/gadisschaper5problem22extra.tar
 # Release configuration
-CND_PLATFORM_Release=Cygwin_4.x-Windows
-CND_ARTIFACT_DIR_Release=dist/Release/Cygwin_4.x-Windows
+CND_PLATFORM_Release=Cygwin-Windows
+CND_ARTIFACT_DIR_Release=dist/Release/Cygwin-Windows
 CND_ARTIFACT_NAME_Release=gadiss_chaper5_problem22_extra
-CND_ARTIFACT_PATH_Release=dist/Release/Cygwin_4.x-Windows/gadiss_chaper5_problem22_extra
-CND_PACKAGE_DIR_Release=dist/Release/Cygwin_4.x-Windows/package
+CND_ARTIFACT_PATH_Release=dist/Release/Cygwin-Windows/gadiss_chaper5_problem22_extra
+CND_PACKAGE_DIR_Release=dist/Release/Cygwin-Windows/package
 CND_PACKAGE_NAME_Release=gadisschaper5problem22extra.tar
-CND_PACKAGE_PATH_Release=dist/Release/Cygwin_4.x-Windows/package/gadisschaper5problem22extra.tar
+CND_PACKAGE_PATH_Release=dist/Release/Cygwin-Windows/package/gadisschaper5problem22extra.tar
 #
 # include compiler specific variables
 #
