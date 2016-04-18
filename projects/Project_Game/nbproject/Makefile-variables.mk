@@ -9,19 +9,19 @@ CND_DISTDIR=dist
 # Debug configuration
 CND_PLATFORM_Debug=Cygwin-Windows
 CND_ARTIFACT_DIR_Debug=dist/Debug/Cygwin-Windows
-CND_ARTIFACT_NAME_Debug=hello_world
-CND_ARTIFACT_PATH_Debug=dist/Debug/Cygwin-Windows/hello_world
+CND_ARTIFACT_NAME_Debug=project_game
+CND_ARTIFACT_PATH_Debug=dist/Debug/Cygwin-Windows/project_game
 CND_PACKAGE_DIR_Debug=dist/Debug/Cygwin-Windows/package
-CND_PACKAGE_NAME_Debug=helloworld.tar
-CND_PACKAGE_PATH_Debug=dist/Debug/Cygwin-Windows/package/helloworld.tar
+CND_PACKAGE_NAME_Debug=projectgame.tar
+CND_PACKAGE_PATH_Debug=dist/Debug/Cygwin-Windows/package/projectgame.tar
 # Release configuration
 CND_PLATFORM_Release=Cygwin-Windows
 CND_ARTIFACT_DIR_Release=dist/Release/Cygwin-Windows
-CND_ARTIFACT_NAME_Release=hello_world
-CND_ARTIFACT_PATH_Release=dist/Release/Cygwin-Windows/hello_world
+CND_ARTIFACT_NAME_Release=project_game
+CND_ARTIFACT_PATH_Release=dist/Release/Cygwin-Windows/project_game
 CND_PACKAGE_DIR_Release=dist/Release/Cygwin-Windows/package
-CND_PACKAGE_NAME_Release=helloworld.tar
-CND_PACKAGE_PATH_Release=dist/Release/Cygwin-Windows/package/helloworld.tar
+CND_PACKAGE_NAME_Release=projectgame.tar
+CND_PACKAGE_PATH_Release=dist/Release/Cygwin-Windows/package/projectgame.tar
 #
 # include compiler specific variables
 #
