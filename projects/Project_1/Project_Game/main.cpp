@@ -124,18 +124,23 @@ void rules(){
 
 //one player
 void oneP(){
+    const int min=1;
+    const int max=4;
     int player;//players pick
     int cpu;//cpu's pick
     int hp1=20;//player ones health
     int hpc=20;//player twos health
     int spcCP=0;//count the times the special move is used by player
     int spcCC=0;//count the times the special move is used by cpu
+    unsigned seed = time(0);
+    srand(seed);
     
     
     
     do {
-        const int min=0;
-    const int max=5;
+        cpu=(rand()%(max-min+1))+min;
+        cout<<cpu<<endl;
+        cout<<spcCP<<endl;
     
         cout<<endl;
       cout<<"\n\t\tPlayer One Pick Your Move\n\n"
@@ -146,47 +151,51 @@ void oneP(){
             <<"5. Forfeit\n"
             <<"Enter your choice: ";
       cin>>player;
+       cpu=(rand()%(max-min+1))+min;
       
-      cpu=(rand()%(max-min))+min;
       switch (player){
-          case 1:if(cpu=1){
+          
+          case 1:
+              if(cpu==1){
               cout<<"Both players punch each other dealing 2 DMG."<<endl;
           hp1=hp1-2;
           hpc=hpc-2;
           }
-          else if(cpu=2){
+          else if(cpu==2){
              cout<<"Player 1 hits for 2 and Player 2 hits hard for 4 DMG"<<endl;
           hp1=hp1-4;
           hpc=hpc-2;
           }
-          else if(cpu=3){
+          else if(cpu==3){
               cout<<"Player 2 blocks half the DMG form Player 1"<<endl;
           hpc=hpc-1;
           }
-          else if(cpu=4){
+          else if(cpu==4){
               cout<<"Player 1 hit for 2 as player 2 misses the counter"<<endl;
           hpc=hpc-2;
           spcCC++;
           }
           break;
           
-          
-          case 2:if(cpu=1){
+         
+          case 2:              
+              
+              if(cpu==1){
                 cout<<"Player 1 hits hard for 4 DMG as player 2"
                     " hits for 2 DMG"<<endl;
           hp1=hp1-2;
           hpc=hpc-4;
           }
-          else if(cpu=2){
+          else if(cpu==2){
               cout<<"both players hit hard for 4 GMG"<<endl;
           hp1=hp1-4;
           hpc=hpc-4;
           }
-          else if(cpu=3){
+          else if(cpu==3){
              cout<<"Player 2 blocks half the DMG form Player 1 power hit"<<endl;
           hpc=hpc-2;
           }
-          else if(cpu=4){
+          else if(cpu==4){
               cout<<"Player 2 counters the spc. Attack and deals 4 DMG"
                       " to Player 1 "<<endl;
           hp1=hp1-4;
@@ -195,51 +204,54 @@ void oneP(){
           break;
           
           
-          case 3:if(cpu=1){
+          case 3:
+              
+          if(cpu==1){
                 cout<<"Player 1 blocks half the DMG form player 2"<<endl;
           hp1=hp1-1;
           }
-          else if(cpu=2){
+          else if(cpu==2){
               cout<<"Player 1 blocks half the DMG from Player"
                       " player 2's power hit."<<endl;
               hp1=hp1-2;
           }
-          else if(cpu=3){
+          else if(cpu==3){
               cout<<"Both players step back to make "
                       "their next move."<<endl;
           }
-          else if(cpu=4){
+          else if(cpu==4){
               cout<<"Player 2 tries to grab player 1"<<endl;
               spcCC++;
           }
           break;
           
-          
-          case 4:if(cpu=1){
+         
+          case 4:
+              
+              if(cpu==1){
                 cout<<"Player 1 misses the counter and "
                         "takes 2 DMG form player 2"<<endl;
           hp1=hp1-2;
           spcCP++;
           }
-          else if(cpu=2){
+          else if(cpu==2){
               cout<<"Player 1 counters the massive blow and deals 4 DMG to "
                       " player 2."<<endl;
               hpc=hpc-4;
               spcCP++;
           }
-          else if(cpu=3){
+          else if(cpu==3){
               cout<<"Player 1 tries to grab Player 2."<<endl;
               spcCP++;
           }
-          else if(cpu=4){
+          else if(cpu==4){
               cout<<"Both focus for their next move."<<endl;
               spcCC++;
-              spcCP++;
           }
           break;
       }
       
-      
+      cout<<"P1   CPU"<<endl;
      cout<<hp1<<"   "<<hpc<<endl;   
     }while(hp1>0 && hpc>0 && player!=5 && spcCP<3 && spcCC<3);
     
@@ -247,7 +259,7 @@ void oneP(){
     
     //************************************************************************\\
     //after counter from player one is used
-    if(spcCP=3){
+    if(spcCP>=3){
     while(hp1>0 && hpc>0 && player!=5 && spcCP<3)
     {
         const int min=1;
@@ -261,23 +273,28 @@ void oneP(){
             <<"5. Forfeit\n"
             <<"Enter your choice: ";
       cin>>player;
-      cpu=(rand()%(max-min))+min;
+      cpu=(rand()%(max-min+1))+min;
+      
+      
+      
       switch (player){
-          case 1:if(cpu=1){
+          case 1:
+              
+              if(cpu==1){
               cout<<"Both players punch each other dealing 2 DMG."<<endl;
           hp1=hp1-2;
           hpc=hpc-2;
           }
-          else if(cpu=2){
+          else if(cpu==2){
              cout<<"Player 1 hits for 2 and Player 2 hits hard for 4 DMG"<<endl;
           hp1=hp1-4;
           hpc=hpc-2;
           }
-          else if(cpu=3){
+          else if(cpu==3){
               cout<<"Player 2 blocks half the DMG form Player 1"<<endl;
           hpc=hpc-1;
           }
-          else if(cpu=4){
+          else if(cpu==4){
               cout<<"Player 1 hit for 2 as player 2 misses the counter"<<endl;
           hpc=hpc-2;
           spcCC++;
@@ -285,22 +302,24 @@ void oneP(){
           break;
           
           
-          case 2:if(cpu=1){
+          case 2:
+              
+              if(cpu==1){
                 cout<<"Player 1 hits hard for 4 DMG as player 2"
                     " hits for 2 DMG"<<endl;
           hp1=hp1-2;
           hpc=hpc-4;
           }
-          else if(cpu=2){
+          else if(cpu==2){
               cout<<"both players hit hard for 4 GMG"<<endl;
           hp1=hp1-4;
           hpc=hpc-4;
           }
-          else if(cpu=3){
+          else if(cpu==3){
              cout<<"Player 2 blocks half the DMG form Player 1 power hit"<<endl;
           hpc=hpc-2;
           }
-          else if(cpu=4){
+          else if(cpu==4){
               cout<<"Player 2 counters the spc. Attack and deals 4 DMG"
                       " to Player 1 "<<endl;
           hp1=hp1-4;
@@ -309,53 +328,59 @@ void oneP(){
           break;
           
           
-          case 3:if(cpu=1){
+          case 3:
+              
+              if(cpu==1){
                 cout<<"Player 1 blocks half the DMG form player 2"<<endl;
           hp1=hp1-1;
           }
-          else if(cpu=2){
+          else if(cpu==2){
               cout<<"Player 1 blocks half the DMG from Player"
                       " player 2's power hit."<<endl;
               hp1=hp1-2;
           }
-          else if(cpu=3){
+          else if(cpu==3){
               cout<<"Both players step back to make "
                       "their next move."<<endl;
           }
-          else if(cpu=4){
+          else if(cpu==4){
               cout<<"Player 2 tries to grab player 1"<<endl;
               spcCC++;
           }
           break;
           
           
-          case 4:if(cpu=1){
+          case 4:
+              
+              if(cpu==1){
               cout<<"Player one is out of counters"<<endl;
           }
-          else if(cpu=2){
+          else if(cpu==2){
               cout<<"Player 1 counters the massive blow and deals 4 DMG to "
                       " player 2."<<endl;
               hpc=hpc-4;
               spcCP++;
           }
-          else if(cpu=3){
+          else if(cpu==3){
               cout<<"Player 1 tries to grab Player 2."<<endl;
               spcCP++;
           }
-          else if(cpu=4){
+          else if(cpu==4){
               cout<<"Both focus for their next move."<<endl;
               spcCC++;
               spcCP++;
           }
           break;
       }
+      cout<<"P1   CPU"<<endl;
       cout<<hp1<<"   "<<hpc<<endl;   
     }
     }
     
     //************************************************************************\\
     // after cpu uses all their counters
-    if(spcCC=3){
+    
+    if(spcCC>=3){
     while(hp1>0 && hpc>0 && player!=5 && spcCC<3)
     {
         const int min=1;
@@ -369,86 +394,96 @@ void oneP(){
             <<"5. Forfeit\n"
             <<"Enter your choice: ";
       cin>>player;
-      cpu=(rand()%(max-min))+min;
+      cpu=(rand()%(max-min+1))+min;
+      
+      
+     
       switch (player){
-          case 1:if(cpu=1){
+          case 1:
+              
+              if(cpu==1){
               cout<<"Both players punch each other dealing 2 DMG."<<endl;
           hp1=hp1-2;
           hpc=hpc-2;
           }
-          else if(cpu=2){
+          else if(cpu==2){
              cout<<"Player 1 hits for 2 and Player 2 hits hard for 4 DMG"<<endl;
           hp1=hp1-4;
           hpc=hpc-2;
           }
-          else if(cpu=3){
+          else if(cpu==3){
               cout<<"Player 2 blocks half the DMG form Player 1"<<endl;
           hpc=hpc-1;
           }
-          else if(cpu=4){
+          else if(cpu==4){
               cout<<"player 2 has no counter left"<<endl;
           }
           break;
           
           
-          case 2:if(cpu=1){
+          case 2:
+              
+              if(cpu==1){
                 cout<<"Player 1 hits hard for 4 DMG as player 2"
                     " hits for 2 DMG"<<endl;
           hp1=hp1-2;
           hpc=hpc-4;
           }
-          else if(cpu=2){
+          else if(cpu==2){
               cout<<"both players hit hard for 4 GMG"<<endl;
           hp1=hp1-4;
           hpc=hpc-4;
           }
-          else if(cpu=3){
+          else if(cpu==3){
              cout<<"Player 2 blocks half the DMG form Player 1 power hit"<<endl;
           hpc=hpc-2;
           }
-          else if(cpu=4){
+          else if(cpu==4){
               cout<<"player 2 has no counter left"<<endl;
           }
           break;
           
           
-          case 3:if(cpu=1){
+          case 3:
+              
+              if(cpu==1){
                 cout<<"Player 1 blocks half the DMG form player 2"<<endl;
           hp1=hp1-1;
           }
-          else if(cpu=2){
+          else if(cpu==2){
               cout<<"Player 1 blocks half the DMG from Player"
                       " player 2's power hit."<<endl;
               hp1=hp1-2;
           }
-          else if(cpu=3){
+          else if(cpu==3){
               cout<<"Both players step back to make "
                       "their next move."<<endl;
           }
-          else if(cpu=4){
+          else if(cpu==4){
               cout<<"player 2 has no counter left"<<endl;
           }
           break;
           
           
-          case 4:if(cpu=1){
+          case 4:if(cpu==1){
               cout<<"Player one is out of counters"<<endl;
           }
-          else if(cpu=2){
+          else if(cpu==2){
               cout<<"Player 1 counters the massive blow and deals 4 DMG to "
                       " player 2."<<endl;
               hpc=hpc-4;
               spcCP++;
           }
-          else if(cpu=3){
+          else if(cpu==3){
               cout<<"Player 1 tries to grab Player 2."<<endl;
               spcCP++;
           }
-          else if(cpu=4){
+          else if(cpu==4){
               cout<<"player 2 has no counter left"<<endl;
           }
           break;
       }
+      cout<<"P1   CPU"<<endl;
       cout<<hp1<<"   "<<hpc<<endl;   
     }
     }
@@ -458,8 +493,7 @@ void oneP(){
     // after bot the player and cpu uses all their counters
     
     else{
-    while(hp1>0 && hpc>0 && player!=5)
-    {
+    while(hp1>0 && hpc>0 && player!=5){
         const int min=1;
     const int max=3;
         cout<<endl;
@@ -471,29 +505,35 @@ void oneP(){
             <<"5. Forfeit\n"
             <<"Enter your choice: ";
       cin>>player;
-      cpu=(rand()%(max-min))+min;
+      cpu=(rand()%(max-min+1))+min;
+      
+
       switch (player){
-          case 1:if(cpu=1){
+          case 1:
+            
+              if(cpu==1){
               cout<<"Both players punch each other dealing 2 DMG."<<endl;
           hp1=hp1-2;
           hpc=hpc-2;
           }
-          else if(cpu=2){
+          else if(cpu==2){
              cout<<"Player 1 hits for 2 and Player 2 hits hard for 4 DMG"<<endl;
           hp1=hp1-4;
           hpc=hpc-2;
           }
-          else if(cpu=3){
+          else if(cpu==3){
               cout<<"Player 2 blocks half the DMG form Player 1"<<endl;
           hpc=hpc-1;
           }
-          else if(cpu=4){
+          else if(cpu==4){
               cout<<"player 2 has no counter left"<<endl;
           }
           break;
           
           
-          case 2:if(cpu=1){
+          case 2:
+              
+              if(cpu==1){
                 cout<<"Player 1 hits hard for 4 DMG as player 2"
                     " hits for 2 DMG"<<endl;
           hp1=hp1-2;
@@ -504,49 +544,54 @@ void oneP(){
           hp1=hp1-4;
           hpc=hpc-4;
           }
-          else if(cpu=3){
+          else if(cpu==3){
              cout<<"Player 2 blocks half the DMG form Player 1 power hit"<<endl;
           hpc=hpc-2;
           }
-          else if(cpu=4){
+          else if(cpu==4){
               cout<<"player 2 has no counter left"<<endl;
           }
           break;
           
           
-          case 3:if(cpu=1){
+          case 3:
+              
+              if(cpu==1){
                 cout<<"Player 1 blocks half the DMG form player 2"<<endl;
           hp1=hp1-1;
           }
-          else if(cpu=2){
+          else if(cpu==2){
               cout<<"Player 1 blocks half the DMG from Player"
                       " player 2's power hit."<<endl;
               hp1=hp1-2;
           }
-         else if(cpu=3){
+         else if(cpu==3){
               cout<<"Both players step back to make "
                       "their next move."<<endl;
           }
-         else if(cpu=4){
+         else if(cpu==4){
               cout<<"player 2 has no counter left"<<endl;
           }
           break;
           
           
-          case 4:if(cpu=1){
+          case 4:
+              
+              if(cpu==1){
               cout<<"Both Players are out of counters"<<endl;
           }
-         else if(cpu=2){
+         else if(cpu==2){
               cout<<"Both Players are out of counters"<<endl;
           }
-          else if(cpu=3){
+          else if(cpu==3){
               cout<<"Both Players are out of counters"<<endl;
           }
-          else if(cpu=4){
+          else if(cpu==4){
               cout<<"Both Players are out of counters"<<endl;
           }
           break;
       }
+      cout<<"P1   CPU"<<endl;
       cout<<hp1<<"   "<<hpc<<endl;   
     }
     }
