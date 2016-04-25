@@ -14,28 +14,29 @@ using namespace std;
 //User variables
 
 //Functions
-int drop(int);
+float drop(int);
 
 int main(int argc, char** argv) {
-    int c;
-    int f=0;
+    float c;
+    int a=0;
     for (int count=0;count<=20;++count){
-        drop(f)
-    c=drop();
-    cout<<"The temperature in Fahrenheit of "<<count<<" is equal to "
+        drop(a);
+    c=drop(a);
+    
+    cout<<"The temperature in Fahrenheit of "<<count<<" is approximately  to "
             ""<<c<<" In Celsius."<<endl;
 
-
+a++;
 }
     return 0;
 }
 
-int drop(int f){
-    int d;
+float drop(int a){
+    float d;
     
+    d=0.55555f*(a-32);
     
-        d=5/9f*(f-32);
-        f++;
+        
     
     return d;
 }
