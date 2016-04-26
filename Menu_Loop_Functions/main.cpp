@@ -22,6 +22,13 @@ void menu();
 void prob1();
 void prob2();
 void prob3();
+void prob4();
+void prob5();
+void prob6();
+void prob7();
+void prob8();
+void prob9();
+void prob10();
 //Execution Begins Here
 int main(int argc, char** argv) {
     //declare and outside loop 
@@ -37,6 +44,13 @@ int main(int argc, char** argv) {
                     case 1:prob1();break;                    
                     case 2:prob2();break;
                     case 3:prob3();break;
+                    case 4:prob1();break;                    
+                    case 5:prob2();break;
+                    case 6:prob1();break;                    
+                    case 7:prob2();break;
+                    case 8:prob1();break;                    
+                    case 9:prob2();break;
+                    case 10:prob2();break;
                     default:{
                             cout<<"Exit?"<<endl;
                     }
@@ -60,6 +74,13 @@ void menu(){
 cout<<"Type 1 to solve problem 1"<<endl;
 cout<<"Type 2 to solve problem 2"<<endl;
 cout<<"Type 3 to solve problem 3"<<endl;
+cout<<"Type 4 to solve problem 1"<<endl;
+cout<<"Type 5 to solve problem 2"<<endl;
+cout<<"Type 6 to solve problem 3"<<endl;
+cout<<"Type 7 to solve problem 1"<<endl;
+cout<<"Type 8 to solve problem 2"<<endl;
+cout<<"Type 9 to solve problem 3"<<endl;
+cout<<"Type 10 to solve problem 3"<<endl;
 cout<<"Type anything else to quit with no solutions."<<endl;
     
 }
@@ -72,11 +93,7 @@ cout<<"Type anything else to quit with no solutions."<<endl;
  *      None
  */
 void prob1(){
-    //Character '1' in Decimal
-int sum=1+2+3+4+5+6+7+8+9+10;
-cout<<endl;
-cout<<"Solution to 1 sum(1->10)="<<sum<<endl;
-cout<<endl;
+    
     
 }
 
@@ -89,12 +106,7 @@ cout<<endl;
  *      None
  */
 void prob2(){
-    //Character '2' in Octal
-                        int prod=1*2*3*4*5*6*7*8*9*10;
-                        cout<<endl;
-                        cout<<"Solution n!(1->10)="<<prod<<endl;
-                        cout<<endl;
-    
+   
 }
 
 //000000011111111112222222222333333333344444444445555555555666666666677777777778
@@ -106,9 +118,89 @@ void prob2(){
  *      None
  */
 void prob3(){
-    float quot=1.0f/2/3/4/5/6/7/8/9/10;
-                        cout<<endl;
-                        cout<<"Solution to 3 quot(1->10)="<<quot<<endl;
-                        cout<<endl;
+   
+}
+//000000011111111112222222222333333333344444444445555555555666666666677777777778
+//345678901234567890123456789012345678901234567890123456789012345678901234567890
+/***************************Problem 1*******************************************
+ *Inputs 
+ *      None
+ * outputs
+ *      None
+ */
+void prob4(){
     
+    
+}
+
+//000000011111111112222222222333333333344444444445555555555666666666677777777778
+//345678901234567890123456789012345678901234567890123456789012345678901234567890
+/***************************Problem 2*******************************************
+ *Inputs 
+ *      None
+ * outputs
+ *      None
+ */
+void prob5(){
+   
+}
+
+//000000011111111112222222222333333333344444444445555555555666666666677777777778
+//345678901234567890123456789012345678901234567890123456789012345678901234567890
+/***************************Problem 3*******************************************
+ *Inputs 
+ *      None
+ * outputs
+ *      None
+ */
+void prob6(){
+   
+}
+//000000011111111112222222222333333333344444444445555555555666666666677777777778
+//345678901234567890123456789012345678901234567890123456789012345678901234567890
+/***************************Problem 1*******************************************
+ *Inputs 
+ *      None
+ * outputs
+ *      None
+ */
+void prob7(){
+    
+    
+}
+
+//000000011111111112222222222333333333344444444445555555555666666666677777777778
+//345678901234567890123456789012345678901234567890123456789012345678901234567890
+/***************************Problem 2*******************************************
+ *Inputs 
+ *      None
+ * outputs
+ *      None
+ */
+void prob8(){
+   
+}
+
+//000000011111111112222222222333333333344444444445555555555666666666677777777778
+//345678901234567890123456789012345678901234567890123456789012345678901234567890
+/***************************Problem 3*******************************************
+ *Inputs 
+ *      None
+ * outputs
+ *      None
+ */
+void prob9(){
+   
+}
+
+//000000011111111112222222222333333333344444444445555555555666666666677777777778
+//345678901234567890123456789012345678901234567890123456789012345678901234567890
+/***************************Problem 3*******************************************
+ *Inputs 
+ *      None
+ * outputs
+ *      None
+ */
+void prob10(){
+   
 }

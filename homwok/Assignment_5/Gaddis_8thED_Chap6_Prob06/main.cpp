@@ -1,7 +1,7 @@
 /* 
  * File:   main.cpp
  * Author: Bassam Elsaleh
- * Gaddis ch.6 prob. 05
+ * Gaddis ch.6 prob. 06
  * Created on April 21, 2016, 10:53 AM
  */
 
