@@ -26,7 +26,6 @@ void twoP();
 
 
 int main(int argc, char** argv) {
-    int player1;//the users input.
     int choice;//menu pick
     
     do 
@@ -1045,7 +1044,7 @@ void twoP(){
     //************************************************************************\\
     // after player 2 uses all their counters
     
-    else if(spcCC>3 && scpCP<4){
+    else if(spcCC>3 && spcCP<4){
         cout<<"P2 is out of counters "<<endl;
         cout<<"Spc. P1   Spc. P2"<<endl;
         cout<<spcCP<<"         "<<"X"<<endl;
