@@ -23,9 +23,8 @@ void menu();
 void rules();
 void oneP();
 void twoP();
+
 //Execution Begins Here
-
-
 int main(int argc, char** argv) {
     int choice;//menu pick
     
