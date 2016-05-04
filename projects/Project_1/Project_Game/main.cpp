@@ -11,6 +11,7 @@
 #include <string>
 #include <cstdlib>
 #include <ctime>
+#include <fstream>
 using namespace std;
 
 //User Libraries
@@ -138,6 +139,7 @@ void oneP(){
     int spcCC=0;//count the times the special move is used by cpu
     unsigned seed = time(0);
     srand(seed);
+    ofstream out;//output
     cout<<endl;
     cout<<"P1        CPU"<<endl;
       cout<<hp1<<"        "<<hpc<<endl; 
@@ -621,6 +623,10 @@ void oneP(){
     }
     else if(hpc<=0){
         cout<<"             You win"<<endl;
+        out.open("Winning certificate");
+        out<<"Congratulations on your Victory, now try to vs your friends in "
+                "2 player mode or play again to get better at your "
+                "guessing skills";
     }
     else{
         cout<<"Player 1 ran away"<<endl;
@@ -628,6 +634,7 @@ void oneP(){
 
     
     }
+      out.close();
     
 }
 
