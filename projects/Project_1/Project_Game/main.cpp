@@ -649,7 +649,6 @@ void oneP(){
 //two players
 void twoP(){
     cout<<endl;
-    cout<<"not done yet"<<endl;
     int player=0;//players pick
     int cpu=0;//player two's pick
     int hp1=20;//player ones health
@@ -679,7 +678,8 @@ void twoP(){
             <<"Enter your choice: ";
       cin>>player;
       
-      cout<<"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"<<endl;
+      cout<<"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+              "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"<<endl;
       //so that the second player wont see player ones move.
       
       cout<<"\n\t\tPlayer Two Pick Your Move\n\n"
@@ -821,7 +821,8 @@ void twoP(){
             <<"Enter your choice: ";
       cin>>player;
       
-      cout<<"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"<<endl;
+      cout<<"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+              "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"<<endl;
       //so that the second player wont see player ones move.
       
       cout<<"\n\t\tPlayer Two Pick Your Move\n\n"
@@ -940,7 +941,8 @@ void twoP(){
             <<"Enter your choice: ";
       cin>>player;
       
-      cout<<"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"<<endl;
+      cout<<"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+              "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"<<endl;
       //so that the second player wont see player ones move.
       
       cout<<"\n\t\tPlayer Two Pick Your Move\n\n"
@@ -1070,7 +1072,8 @@ void twoP(){
             <<"Enter your choice: ";
       cin>>player;
       
-      cout<<"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"<<endl;
+      cout<<"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+              "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"<<endl;
       //so that the second player wont see player ones move.
       
       cout<<"\n\t\tPlayer Two Pick Your Move\n\n"
