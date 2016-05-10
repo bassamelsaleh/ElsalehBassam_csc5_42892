@@ -1,0 +1,19 @@
+Month #1
+r
+s
+c
+c
+s
+It rained 1 times was cloudy 2 times and was sunny 2Month #2
+r
+r
+r
+r
+c
+It rained 4 times was cloudy 1 times and was sunny 0Month #3
+r
+s
+c
+s
+s
+It rained 1 times was cloudy 1 times and was sunny 3
