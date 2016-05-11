@@ -28,9 +28,6 @@ s
 s
 r
 r
-rained: 9
-cloudy: 3
-sunny: 18
 s
 r
 s
@@ -61,9 +58,6 @@ s
 s
 r
 r
-rained: 13
-cloudy: 3
-sunny: 14
 s
 r
 s
@@ -94,7 +88,3 @@ s
 s
 c
 c
-rained: 6
-cloudy: 9
-sunny: 15
-July had the most rain

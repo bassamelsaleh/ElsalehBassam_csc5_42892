@@ -16,67 +16,82 @@ using namespace std;
 //global variables
 
 //functions
-
+void first(char[],char[][30]);
 int main(int argc, char** argv) {
-    const int SIZE=5;
+//    mnt[3][30]
+    const int SIZE=30;
     const int MON=3;
-    int monk[MON]={1,2,3};
-    int rain[MON]={};
-    char day[SIZE]={};
-    int min=0;
-    int max=0;
+    char rain[MON][SIZE]={{}};
+    int one[SIZE]={};
     
     ofstream in;
     in.open("RainOrShine.txt");
     
+    char fn[]="days.dat";
     
-    for (int count=0;count<MON;count++){
-    int countr=0;
-        int countc=0;
-        int counts=0;
-        cout<<"How much did the monkey #"<<monk[count]<<" eat "
-                "per day in the last five days"<<endl;
-        in<<"Month #"<<monk[count]<<endl;
-        for(int read=0;read<SIZE;read++){
-        cin>>day[read];
-        in<<day[read]<<"\n";
-        if(day[read]=='s'){//cant get the numbers to read the amount of days were r s and c
-         counts++;
-        }
-        else if(day[read]=='c')
+    /////////////    /////////////    /////////////    /////////////
+    first(fn,rain);
+//      int i=0;
+    for (int count=0; count<MON;count++){
+        int _rain=0;
+        int _sunny=0;
+        int _cloudy=0;
+        for(int sec=0; sec<SIZE; ++sec) 
         {
-            countc++;
+            in << rain[count][sec] << endl;
+            if(rain[count][sec]=='r') _rain++;
+
+            if(rain[count][sec]=='s') _sunny++;
+
+            if(rain[count][sec]=='c') _cloudy++;
         }
-        else if (day[read]=='r'){
-            countr++;
-            rain[count]=countr;
-        }
-        cout<<endl;
-        
-        }
-        
-        in<<"It rained ";
-        in<<countr;
-        in<<" times was cloudy ";
-        in<<countc;
-        in<<" times and was sunny ";
-        in<<counts;
+        one[count]=_rain;
+        cout<<one[count];
+        in << "rained: " << _rain << endl;
+        in << "cloudy: " << _cloudy << endl;
+        in << "sunny: " << _sunny << endl;
+    }
+    /////////////    /////////////    /////////////    /////////////
+    
+    if (one[0]>one[1] &&one[0]>one[2]){
+        in<<"June had the most rain";
+    }
+    
+    else if (one[1]>one[0] &&one[1]>one[2]){
+        in<<"July had the most rain";
+    }
+    
+    else if (one[2] > one[1] &&one[2]>one[0]){
+        in<<"August had the most rain";
     }
     
     
-    /*
-    for(int count=0; count<MON;count++){
-        if(rain[1]>rain[2] && rain[1]>rain[3])
-            in<<"June had the most rain"<<endl;
-        
-        else if(rain[2]>rain[1] && rain[2]>rain[3])
-            in<<"July had the most rain"<<endl;
-        
-        else if(rain[3]>rain[2] && rain[1]<rain[3])
-            in<<"August had the most rain"<<endl;
-            
-    }*/
-    
     in.close();
     return 0;
+}
+
+void first(char fn[], char dat[][30]){
+    ifstream days;
+    days.open("days.dat");
+    
+    
+//    int n=0;
+//    while(days>>dat[n]){
+//        n++;
+//    }
+//        
+    //Read from the file
+    /////////////////////////////////////////////////////////////
+    for(int row=0; row<3; ++row) {
+        for(int col=0;col<30;++col){
+            days >> dat[row][col];
+        }
+    }
+     /////////////////////////////////////////////////////////////
+    //Close the file
+    days.close();
+    
+    //Return the size
+//    return n;
+    
 }
