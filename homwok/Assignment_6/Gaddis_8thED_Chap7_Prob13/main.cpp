@@ -38,10 +38,10 @@ int main(int argc, char** argv) {
         cout<<"\t Student #"<<row<<endl;
         cout<<"What score did "<<name[count]<<" get?"<<endl;
         
-        int gr=0;
         
-        for(int sec=1; sec<TEST+1; sec++){
-            cout<<"Test #"<<sec<<endl;
+//        for(int sec=1; sec<TEST+1; sec++){
+         for(int sec=0; sec<TEST; sec++){
+            cout<<"Test #"<<sec+1<<endl;
             cin>>me[count][sec];
             
             //input grade
@@ -49,22 +49,21 @@ int main(int argc, char** argv) {
                 cout<<"Please enter a valid grade: "<<endl;
                 cin>>me[count][sec];
                 min=me[count][0];
-    
-                
+ 
+            }
             tot[count]+=me[count][sec];
+//            cout << "HERE " << tot[count] << endl;
         }
-        
+        min=me[count][0];
+//        for (int low=1;low<TEST-1;low++){
+        for (int low=1;low<TEST;low++){
+            if(me[count][low]<min){
+              min=me[count][low];
+            }
         }
-        for (int low=0;low<TEST-1;low++){
-       if(me[count][low]>me[count][low+1] && me[count][low+1]<min){
-        min=me[count][low];
-        }
-        else;
-        }
-        cout<<min;
-        
+        tot[count]=tot[count]-min;
         //calculate grade
-        final=tot[count]/gr;
+        final=tot[count]/3;
         if (final>=90){
             grad[count]="an A";
         }
@@ -82,6 +81,8 @@ int main(int argc, char** argv) {
         }
         cout<<name[count]<<" got "<<grad[count]<<" with an"
                 "average of "<<final<<endl;
+
+
     }
 
     return 0;
