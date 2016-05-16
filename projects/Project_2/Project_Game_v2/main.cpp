@@ -23,6 +23,7 @@ void menu();
 void rules();
 void oneP();
 void twoP();
+void chal();
 
 //Execution Begins Here
 int main(int argc, char** argv) {
@@ -39,11 +40,12 @@ int main(int argc, char** argv) {
                     case 1:oneP();break;                    
                     case 2:twoP();break;
                     case 3:rules();break;
+                    case 4:chal();break;
                     default:{
                             cout<<"Exit?"<<endl;
                     }
             };
-    }while (choice != 4);
+    }while (choice != 5);
 
     return 0;
 }
@@ -59,8 +61,9 @@ void menu(){
       cout<<"\n\t\tFighter Fighter\n\n"
             <<"1. Single Player\n"
             <<"2. Two Players\n"
-            <<"3. rules\n"
-            <<"4. Quit the Program\n"
+            <<"3. Rules\n"
+            <<"4. Challenge Mode\n"
+            <<"5. Quit the Program\n"
             <<"Enter your choice: ";
 }
 
@@ -85,7 +88,15 @@ void rules(){
        "and see the result of their moves, be sure to keep  track "
        "of your own health to see when to"<<endl<<"Defend, or DEFF, yourself"
        " or if its safe to hit the opponent to be the best fighter around."
-       <<endl<<endl<<endl;
+       <<endl;
+       cout<<"Update v2.01: WE HAVE FINALLY REALESED CHALLANG MODE\n"
+               "In this mode you will be able to pick X amount of game that"
+               " you will input 15 attacks before the fight and your fighter"
+               " will do each move as you input them.\n"
+               "Notice that in this game mode you can not FORFEOT, also "
+               "you moves are 1-4 if you in put a wrong value, its will be read"
+               " as passing a turn."<<endl;
+       cout<<endl<<endl<<endl;
         
         cout<<"     There are 2 types of attacks: "<<endl<<endl;
         
@@ -115,6 +126,14 @@ void rules(){
         cout<<" Each game will end by announcing the winner and take you "
                 "back to the main menu."<<endl<<" when you are ready press"
                 " 1 and ENTER."<<endl<<endl;
+        
+       cout<<"Update v2.01: WE HAVE FINALLY REALESED CHALLANG MODE\n"
+               "In this mode you will be able to pick X amount of game that"
+               " you will input 15 attacks before the fight and your fighter"
+               " will do each move as you input them.\n"
+               "Notice that in this game mode you can not FORFEOT, also "
+               "you moves are 1-4 if you in put a wrong value, its will be read"
+               " as passing a turn."<<endl<<endl;
         cin>>a;
         
         
@@ -1200,4 +1219,17 @@ void twoP(){
 
     
     }
+}
+
+
+
+//******************************************************************************
+//******************************************************************************
+//******************************************************************************
+//******************************************************************************
+
+//two players
+void chal(){
+    cout<<endl;
+    cout<<"Still installing update"<<endl;
 }
