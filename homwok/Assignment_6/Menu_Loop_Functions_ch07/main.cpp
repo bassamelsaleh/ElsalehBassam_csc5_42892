@@ -103,14 +103,12 @@ void prob1(){
        if(in[count]>in[count+1] && in[count+1]<min){
         min=in[count+1];
         }
-        else;
         }
     max=in[0];
     for (int count=0;count<SIZE-1;count++){
        if(in[count]<in[count+1] && in[count+1]>max){
         max=in[count+1];
         }
-        else;
         
     }
     
@@ -226,8 +224,6 @@ void prob3(){
        if(sale[count]<sale[count+1] && sale[count+1]>max){
         larg=name[count+1];
         }
-        else;
-        
     }
     cout<<"The jar that sold the most was "<<larg<<endl;
     cout<<"The jar that sold the lest was "<<small<<endl;
@@ -260,7 +256,7 @@ void prob4(){
 }
 void enter(int num[], int n, int size){
     for (int count=0; count<size;count++){
-        if (n=num[count]){
+        if (n<num[count]){
             cout<<num[count]<<endl;
         }
     }
