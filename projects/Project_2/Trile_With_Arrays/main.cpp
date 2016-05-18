@@ -34,7 +34,7 @@ int main(int argc, char** argv) {
     int sec;
     int thir;
     int four;
-    ofstream out;//output
+    ofstream outs;//output
     cout<<endl;
     cout<<"P1        CPU"<<endl;
       cout<<hp1<<"        "<<hpc<<endl; 
@@ -43,7 +43,6 @@ int main(int argc, char** argv) {
       
       cout<<"How many special games do you want to play?"<<endl;
       cin>>turns;
-      ;
       cout<<"\n\t\tPlayer One Pick Your Moves\n\n"
             <<"1. Punch\n"
             <<"2. SpcAttack. Attack\n"
@@ -53,7 +52,7 @@ int main(int argc, char** argv) {
             <<"Enter your choice: ";
       
       for (int count=0; count<turns;count++){
-          cout<<"Pick your 20 moves for game #"<<count+1<<endl;
+          cout<<"Pick your 15 moves for game #"<<count+1<<endl;
       for(int sec=0;sec<ROUND;sec++){
           cout<<"Move #"<<sec+1<<endl;
           cin>>player[count][sec];
@@ -67,8 +66,10 @@ int main(int argc, char** argv) {
       //2 = spc.
       //3 = block
       //4 = counter
-      for (int re=0;re<turns;re++){
     for(int count=0; hp1>0 && hpc>0 && count<turns;count++ ){
+        
+          cout<<"GAME #"<<count+1<<endl;
+          cout<<"***************************************************"<<endl;
         
     int hp1=20;//player ones health
     int hpc=20;//player twos health
@@ -516,14 +517,14 @@ int main(int argc, char** argv) {
     }
     else if(hpc<=0){
         cout<<"             You win"<<endl;
-        out.open("Winning certificate");
-        out<<"Congratulations on your Victory special mode,"
-                " now try to vs your friends in "
-                "2 player mode or play again to get better at your "
+        outs.open("Winning certificate");
+        outs<<"Congratulations on your Victory in special mode,\n"
+                " now try to vs your friends in \n"
+                "2 player mode or play again to get better at your\n "
                 "guessing skills";
     }
     else if (hpc<hp1){
-        cout<<"player one stands victorious, but his enemy still stands."<<endl;
+        cout<<"Player one stands victorious, but his enemy still stands."<<endl;
     }
     else{
         cout<<"Player 2 wins, but you still stand."<<endl;
@@ -532,9 +533,10 @@ int main(int argc, char** argv) {
     cout<<"__________________________________________________________________"<<endl;
     
     }
-}
-      out.close();
+      outs.close();
 
     return 0;
 }
+      
+
 
