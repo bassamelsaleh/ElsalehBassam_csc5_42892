@@ -17,12 +17,14 @@ using namespace std;
 /*
  * 
  */
+void mrkSrt1(int [],int );
 int main(int argc, char** argv) {
      const int min=1;
     const int max=4;
     const int ROUND=15;//used to make it only 20 turns and then the winner is decided.
     const int GAMES=10;
     int turns=0;
+    int win[GAMES];
     int player[GAMES][ROUND]={};//players pick
     int cpu;//cpu's pick
     int hp1=20;//player ones health
@@ -533,9 +535,21 @@ int main(int argc, char** argv) {
     cout<<"__________________________________________________________________"<<endl;
     
     }
+      mrkSrt1(win)
       outs.close();
 
     return 0;
+}
+void mrkSrt1(int a[],int n){
+    for(int i=0;i<n-1;i++){
+        for(int j=i+1;j<n;j++){
+            if(a[i]>a[j]){
+                a[i]=a[i]^a[j];
+                a[j]=a[i]^a[j];
+                a[i]=a[i]^a[j];
+            }
+        }
+    }
 }
       
 
