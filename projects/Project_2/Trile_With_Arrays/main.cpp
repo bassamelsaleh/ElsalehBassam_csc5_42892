@@ -17,7 +17,9 @@ using namespace std;
 /*
  * 
  */
-void mrkSrt1(int [],int );
+//functions
+void mrkSrt1(int [],int);
+
 int main(int argc, char** argv) {
      const int min=1;
     const int max=4;
@@ -42,9 +44,11 @@ int main(int argc, char** argv) {
       cout<<hp1<<"        "<<hpc<<endl; 
       
       
-      
+      //pick number of games
       cout<<"How many special games do you want to play?"<<endl;
       cin>>turns;
+      
+      //show what players can pick
       cout<<"\n\t\tPlayer One Pick Your Moves\n\n"
             <<"1. Punch\n"
             <<"2. SpcAttack. Attack\n"
@@ -52,7 +56,7 @@ int main(int argc, char** argv) {
             <<"4. Counter\n"
             <<"5. XXXXXXXX\n"
             <<"Enter your choice: ";
-      
+      //pick your moves for game #X
       for (int count=0; count<turns;count++){
           cout<<"Pick your 15 moves for game #"<<count+1<<endl;
       for(int sec=0;sec<ROUND;sec++){
@@ -524,9 +528,11 @@ int main(int argc, char** argv) {
                 " now try to vs your friends in \n"
                 "2 player mode or play again to get better at your\n "
                 "guessing skills";
+        win[count]=win[count]+1;
     }
     else if (hpc<hp1){
         cout<<"Player one stands victorious, but his enemy still stands."<<endl;
+        win[count]=win[count]+1;
     }
     else{
         cout<<"Player 2 wins, but you still stand."<<endl;
@@ -535,7 +541,7 @@ int main(int argc, char** argv) {
     cout<<"__________________________________________________________________"<<endl;
     
     }
-      mrkSrt1(win)
+      mrkSrt1(win,turns);
       outs.close();
 
     return 0;

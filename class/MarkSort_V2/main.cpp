@@ -17,11 +17,6 @@ using namespace std;
 //Global Constants
 
 //Function Prototypes
-void mrkSort(int [],int);//Sort the whole array
-void smlNLst(int [],int, int);//Find smallest in list from a position.
-void swap(int &,int&);//Swap elements
-void prntAry(int [],int,int);//Print the array with columns
-void fillAry(int [],int);//fill array with 2 digit random numbers
 
 //Execution Begins Here!
 int main(int argc, char** argv) {

@@ -24,6 +24,7 @@ void rules();
 void oneP();
 void twoP();
 void chal();
+void mrkSrt1(int [],int);
 
 //Execution Begins Here
 int main(int argc, char** argv) {
@@ -1230,17 +1231,19 @@ void twoP(){
 
 //two players
 void chal(){
-   const int min=1;
-    const int max=4;
-    const int ROUND=15;//used to make it only 20 turns and then the winner is decided.
-    const int GAMES=10;
-    int turns=0;
-    int player[GAMES][ROUND]={};//players pick
-    int cpu;//cpu's pick
-    int hp1=20;//player ones health
-    int hpc=20;//player twos health
-    int spcCP=0;//count the times the special move is used by player
-    int spcCC=0;//count the times the special move is used by cpu
+   const int min=1;                 //rand
+    const int max=4;                //rand
+    const int ROUND=15;             //used to make it only 15 turns and then the winner is decided.
+    const int GAMES=10;             //unsed to make only 10 games 
+    int turns=0;                    //turn number
+    int win[GAMES];                 // recored wins
+    int exit;                       //leave game mode
+    int player[GAMES][ROUND]={};    //players pick
+    int cpu;                        //cpu's pick
+    int hp1=20;                     //player ones health
+    int hpc=20;                     //player twos health
+    int spcCP=0;                    //count the times the special move is used by player
+    int spcCC=0;                    //count the times the special move is used by cpu
     unsigned seed = time(0);
     srand(seed);
     int sec;
@@ -1734,17 +1737,36 @@ void chal(){
                 " now try to vs your friends in \n"
                 "2 player mode or play again to get better at your\n "
                 "guessing skills";
+        win[count]=win[count]+1;
     }
     else if (hpc<hp1){
         cout<<"Player one stands victorious, but his enemy still stands."<<endl;
+        win[count]=win[count]+1;
     }
     else{
         cout<<"Player 2 wins, but you still stand."<<endl;
     }
     cout<<"END OF GAME #"<<count+1<<endl<<endl<<endl;
     cout<<"__________________________________________________________________"<<endl;
-    
+    cout<<"Enter anything to continue"<<endl;
+      cin>>exit;
     }
+      mrkSrt1(win,turns);
       outs.close();
+      cout<<"Enter anything to go back to the main menu"<<endl;
+      cin>>exit;
 
+}
+
+//sort the wins
+void mrkSrt1(int a[],int n){
+    for(int i=0;i<n-1;i++){
+        for(int j=i+1;j<n;j++){
+            if(a[i]>a[j]){
+                a[i]=a[i]^a[j];
+                a[j]=a[i]^a[j];
+                a[i]=a[i]^a[j];
+            }
+        }
+    }
 }
