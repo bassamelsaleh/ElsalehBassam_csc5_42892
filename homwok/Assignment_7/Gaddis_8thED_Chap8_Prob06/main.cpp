@@ -18,10 +18,15 @@ using namespace std;
 
 int main(int argc, char** argv) {
     const int SIZE=20;
-    int in[SIZE]={"Collins, Boll", "smith ,Brat","Allen, Jim",
-    "Graffin, Jim", "Stamey, Marty", "Rose, Geri", "Taylor, Terri"};
-    cout<<"Input the amount of rain per month in the"
-            "last year "<<endl;
+    string in[SIZE]={"Collins, Boll", "Smith ,Brat","Allen, Jim",
+                "Graffin, Jim", "Stamey, Marty", "Rose, Geri",
+                "Taylor, Terri", "Jason, Jill",
+                "Allison, Jeff", "Looney, Joe", "Wolfe, Bill", 
+                "James, Jean", "Weaver, Jim" "Pore, Bob",
+                "Rutherford, Greg", "Javes, Renee",
+                "Harrison, Rose", "Setzer, Cathy",
+                "Pike, Gordon", "Holland, Beth"};
+    
 
     
     //    for(int count=0;count<SIZE;count++){
@@ -34,11 +39,14 @@ int main(int argc, char** argv) {
     
     
     for(int i=0; i<SIZE-1;i++){
-        for(int pos=i+1;pos<SIZE;pos++){
+        for(int pos=i;pos<SIZE;pos++){
             if(in[i]>in[pos]){
-                in[pos]=in[pos]^in[i];
-                in[i]=in[pos]^in[i];
-                in[pos]=in[pos]^in[i];
+//                in[pos]=in[pos]^in[i];
+//                in[i]=in[pos]^in[i];
+//                in[pos]=in[pos]^in[i];
+                  string tmp = in[i];
+                  in[i] = in[pos];
+                  in[pos] = tmp;
             }
         }
     }
