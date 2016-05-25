@@ -6,8 +6,6 @@
  */
 
 #include <iostream>
-#include <ctime>
-#include <cstdlib>
 
 using namespace std;
 
@@ -16,56 +14,72 @@ using namespace std;
 //global variables
 
 //functions
+void mrkSort(int [],int);//Sort the whole array
+void smlNLst(int [],int, int);//Find smallest in list from a position.
 
 int main(int argc, char** argv) {
-    const int SIZE=10;
+    const int SIZE=18;
     int in[SIZE]={};
     int user;
-    int wnumb;
-    unsigned seed = time(0);
     
-    //Lucky numbers
-    in[0]=13579;
-    in[1]=26791;
-    in[2]=26792;
-    in[3]=33445;
-    in[4]=55555;
-    in[5]=62483;
-    in[6]=77777;
-    in[7]=79422;
-    in[8]=85647;
-    in[9]=93121;
+    //in database
+    in[0]=5658845;
+    in[1]=4520125;
+    in[2]=7895122;
+    in[3]=8777541;
+    in[4]=8451277;
+    in[5]=1302850;
+    in[6]=8080452;
+    in[7]=4562555;
+    in[8]=5552012;
+    in[9]=5050552;
+    in[10]=7825877;
+    in[11]=1250255;
+    in[12]=1005231;
+    in[13]=6545231;
+    in[14]=3852085;
+    in[15]=7576651;
+    in[16]=7881200;
+    in[17]=4581002;
+
+    //user input
+    cout << "Enter the account number:";
+    cin>>user;
+    mrkSort(in,SIZE);
+    
+    int beg=0,end=SIZE-1,middle=0,ans=0;
+    while(end>=beg){
+        middle=(beg+end)/2;
+        if(in[middle]==user){
+            cout<<"Valid Account"<<endl;
+            ans=1;
+            break;
+        }
+        else if(in[middle]>user)end=middle-1;
+        else beg=middle+1;
+        
+    }
+    if(ans==0){
+        cout<<"Invalid Account";
+    }
    
     
-    srand(seed);
-    wnumb = rand() % 99999 + 10000;
- 
-    int ans;
-    for (int i=0; i<1; i++){
-        int ans;
-        for (int count = 0; count < SIZE; count++) {
-            int first=0;
-            int last=SIZE;
-            int middle;
-            middle=(first +last)/2;//calculate the middle
-            if (wnumb == in[middle]) {
-                ans = 1;
-            }
-            else if (in[middle]>wnumb){
-                last=middle-1;
-            }
-            else{
-                first=middle+1;
-            }
-        }
-        if (ans != 1) {
-            cout << "Try Again next time" << endl;
-        }
-        else {
-            cout << "You Win" << endl;
-        }
+    return 0;
+}
+
+
+
+void mrkSort(int a[],int n){
+    for(int i=0; i<n-1;i++){
+        smlNLst(a,n,i);
+    }
+}
+    
+
+void smlNLst(int c[],int l,int pos)
+{ 
+    for(int i=pos+1;i<l;i++){
+        if(c[pos]>c[i])swap(c[pos],c[i]);
     }
     
-    
-    return 0;
 }

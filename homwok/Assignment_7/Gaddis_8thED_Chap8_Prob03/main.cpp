@@ -40,21 +40,24 @@ int main(int argc, char** argv) {
     srand(seed);
     wnumb = rand() % 99999 + 10000;
  
-    int ans;
-    for (int i=0; i<1; i++){
-        int ans;
-        for (int count = 0; count < SIZE; count++) {
-            if (wnumb == in[count]) {
-                ans = 1;
-            }
+    
+    int beg=0,end=SIZE-1,middle=0,ans=0;
+    while(end>=beg){
+        middle=(beg+end)/2;
+        if(in[middle]==wnumb){
+            cout<<"Winner"<<endl;
+            ans=1;
+            break;
         }
-        if (ans != 1) {
-            cout << "Try Again next time" << endl;
-        }
-        else {
-            cout << "You Win" << endl;
-        }
+        else if(in[middle]>wnumb)end=middle-1;
+        else beg=middle+1;
+        
     }
+    if(ans==0){
+        cout<<"Loser";
+    }
+    
+    
     
     
     return 0;
