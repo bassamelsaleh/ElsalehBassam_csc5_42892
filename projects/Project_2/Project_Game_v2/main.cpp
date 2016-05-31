@@ -1229,7 +1229,7 @@ void twoP(){
 //******************************************************************************
 //******************************************************************************
 
-//two players
+//Challenge mode
 void chal(){
    const int min=1;                 //rand
     const int max=4;                //rand
@@ -1748,12 +1748,12 @@ void chal(){
     }
     cout<<"END OF GAME #"<<count+1<<endl<<endl<<endl;
     cout<<"__________________________________________________________________"<<endl;
-    cout<<"Enter anything to continue"<<endl;
-      cin>>exit;
+    cout<<"Enter any number to continue"<<endl;
+    cin>>exit;
     }
       mrkSrt1(win,turns);
       outs.close();
-      cout<<"Enter anything to go back to the main menu"<<endl;
+      cout<<"Enter any number to go back to the main menu"<<endl;
       cin>>exit;
 
 }
