@@ -1233,7 +1233,7 @@ void twoP(){
 
 //Challenge mode
 void chal(){
-   const int min=1;                 //rand
+    const int min=1;                 //rand
     const int max=4;                //rand
     const int ROUND=15;             //used to make it only 15 turns and then the winner is decided.
     const int GAMES=10;             //unsed to make only 10 games 
@@ -1254,7 +1254,7 @@ void chal(){
     ofstream outs;//output
     cout<<endl;
     cout<<"P1        CPU"<<endl;
-      cout<<hp1<<"        "<<hpc<<endl; 
+    cout<<hp1<<"        "<<hpc<<endl; 
       
       
       
