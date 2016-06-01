@@ -125,8 +125,7 @@ void rules(){
                 " to your opponent and the game will end."<<endl<<endl;
         
         cout<<" Each game will end by announcing the winner and take you "
-                "back to the main menu."<<endl<<" when you are ready press"
-                " 1 and ENTER."<<endl<<endl;
+                "back to the main menu."<<endl<<endl<<endl;
         
        cout<<"Update v2.01: WE HAVE FINALLY REALESED CHALLANG MODE\n"
                "In this mode you will be able to pick X amount of game that"
@@ -134,7 +133,10 @@ void rules(){
                " will do each move as you input them.\n"
                "Notice that in this game mode you can not FORFEOT, also "
                "you moves are 1-4 if you in put a wrong value, its will be read"
-               " as passing a turn."<<endl<<endl;
+               " as passing a turn."<<endl<<endl<<endl;
+       
+       cout<<"--->When you are ready press"
+                " 1 and ENTER."<<endl<<endl;
         cin>>a;
         
         

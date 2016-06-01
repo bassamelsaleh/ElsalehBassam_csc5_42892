@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=Project_Game_v2
+PROJECTNAME=MarkSort_Array_Dynamiv_Memory
 
 # Active Configuration
 DEFAULTCONF=Debug
