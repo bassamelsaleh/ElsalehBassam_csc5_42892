@@ -28,22 +28,9 @@ int main(int argc, char** argv) {
                 "Pike, Gordon", "Holland, Beth"};
     
 
-    
-    //    for(int count=0;count<SIZE;count++){
-//        cin>>in[count];
-//        if (in<0){
-//            cout<<"input a valid number"<<endl;
-//        cin>>in[count];
-//        }
-//    }
-    
-    
     for(int i=0; i<SIZE-1;i++){
         for(int pos=i;pos<SIZE;pos++){
             if(in[i]>in[pos]){
-//                in[pos]=in[pos]^in[i];
-//                in[i]=in[pos]^in[i];
-//                in[pos]=in[pos]^in[i];
                   string tmp = in[i];
                   in[i] = in[pos];
                   in[pos] = tmp;
