@@ -84,4 +84,4 @@ void fillAry(int a[],int n){
     for(int i=0;i<n;i++){
         a[i]=rand()%90+10;//2 digit random number
     }
-                            }
+}
