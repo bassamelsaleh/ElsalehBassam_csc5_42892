@@ -1,7 +1,7 @@
 /*
  * File:   main.cpp
  * Bassam Elsaleh
- * Project - Game (name still not decided)
+ * Project - Fighter Fighter
  * Created on April 18, 2016, 2:21 PM
  * Modified on ----
  */
@@ -19,12 +19,13 @@ using namespace std;
 //Global Constants
 
 //Function Prototypes
-void menu();
-void rules();
-void oneP();
-void twoP();
-void chal();
-void mrkSrt1(int [],int);
+void menu();                 //Menu of the game
+void rules();               //rules of the game
+void oneP();                //one player mode
+void twoP();                //two players
+void chal();                //challenge mode
+void mrkSrt1(int [],int);   //sort the wins
+int c1(int &);              //pass the health and return the health
 
 //Execution Begins Here
 int main(int argc, char** argv) {
@@ -51,12 +52,9 @@ int main(int argc, char** argv) {
     return 0;
 }
 
-//******************************************************************************
-//******************************************************************************
-//******************************************************************************
-//******************************************************************************
+/******************************************************************************
+**************************Menu************************************************/
 
-//Game Menu
 void menu(){
     cout<<endl;
       cout<<"\n\t\tFighter Fighter\n\n"
@@ -68,12 +66,9 @@ void menu(){
             <<"Enter your choice: ";
 }
 
-//******************************************************************************
-//******************************************************************************
-//******************************************************************************
-//******************************************************************************
+/******************************************************************************
+**************************Rules***********************************************/
 
-//Game Rules
 void rules(){
     int a;
 
@@ -143,12 +138,9 @@ void rules(){
     }
 }
 
-//******************************************************************************
-//******************************************************************************
-//******************************************************************************
-//******************************************************************************
+/******************************************************************************
+**************************One Player******************************************/
 
-//one player
 void oneP(){
     const int min=1;
     const int max=4;
@@ -662,12 +654,9 @@ void oneP(){
     
 
 
-//******************************************************************************
-//******************************************************************************
-//******************************************************************************
-//******************************************************************************
+/******************************************************************************
+**************************Two Players*****************************************/
 
-//two players
 void twoP(){
     cout<<endl;
     int player=0;//players pick
@@ -1226,12 +1215,10 @@ void twoP(){
 
 
 
-//******************************************************************************
-//******************************************************************************
-//******************************************************************************
-//******************************************************************************
+/******************************************************************************
+**************************Challenge mode**************************************/
 
-//Challenge mode
+
 void chal(){
     const int min=1;                 //rand
     const int max=4;                //rand
@@ -1258,8 +1245,11 @@ void chal(){
       
       
       
+       //pick number of games
       cout<<"How many special games do you want to play?"<<endl;
       cin>>turns;
+      
+      //show what players can pick
       cout<<"\n\t\tPlayer One Pick Your Moves\n\n"
             <<"1. Punch\n"
             <<"2. SpcAttack. Attack\n"
@@ -1267,7 +1257,7 @@ void chal(){
             <<"4. Counter\n"
             <<"5. XXXXXXXX\n"
             <<"Enter your choice: ";
-      
+      //pick your moves for game #X
       for (int count=0; count<turns;count++){
           cout<<"Pick your 15 moves for game #"<<count+1<<endl;
       for(int sec=0;sec<ROUND;sec++){
@@ -1298,7 +1288,7 @@ void chal(){
         cout<<"Spc. P1   Spc. P2"<<endl;
         cout<<spcCP<<"         "<<spcCC<<endl;
     
-        cout<<endl;
+      cout<<endl;
       cpu=(rand()%(max-min+1))+min;
       cout<<endl;
       
@@ -1307,27 +1297,31 @@ void chal(){
           
           
           case 1: //player one punches
-              if(cpu==1){
-              cout<<"Both players punch each other dealing 2 DMG."<<endl;
-          hp1=hp1-2;
-          hpc=hpc-2;
-          }
-          else if(cpu==2){
-             cout<<"Player 1 hits for 2 and Player 2 hits hard for 4 DMG"<<endl;
-          hp1=hp1-4;
-          hpc=hpc-2;
-          spcCC++;// adds a counter to cpu
-          }
-          else if(cpu==3){
-              cout<<"Player 2 blocks the DMG form Player 1"<<endl;
-              
-          }
-          else if(cpu==4){
-              cout<<"Player 1 hit for 2 as player 2 misses the counter"<<endl;
-          hpc=hpc-2;
-          
-          }
-          break;
+              if (cpu == 1) {
+                cout << "Both players punch each other dealing 2 DMG." << endl;
+                hpc = hpc - 2;
+                c1(hp1);
+                
+                
+            }
+            else if (cpu == 2) {
+                cout << "Player 1 hits for 2 and Player 2 hits hard for 4 DMG" << endl;
+                hp1 = hp1 - 4;
+                hpc = hpc - 2;
+                spcCC++; // adds a counter to cpu
+     
+            } 
+            else if (cpu == 3) {
+                cout << "Player 2 blocks the DMG form Player 1" << endl;
+
+            } 
+            else if (cpu == 4) {
+                cout << "Player 1 hit for 2 as player 2 misses the counter" << endl;
+                hpc = hpc - 2;
+
+            }
+   
+            break;
           
          
           case 2:  //player one uses spc            
@@ -1335,29 +1329,29 @@ void chal(){
               if(cpu==1){
                 cout<<"Player 1 hits hard for 4 DMG as player 2"
                     " hits for 2 DMG"<<endl;
-          hp1=hp1-2;
-          hpc=hpc-4;
-          spcCP++;// adds counter to player
-          }
-          else if(cpu==2){
-              cout<<"both players hit hard for 4 GMG"<<endl;
-          hp1=hp1-4;
-          hpc=hpc-4;
-          spcCP++;// adds counter to player
-          spcCC++;// adds counter to cpu
-          }
-          else if(cpu==3){
-             cout<<"Player 2 blocks 2 DMG form Player 1 power hit"<<endl;
-             hpc=hpc-2;
-             spcCP++;// adds counter to player
-          }
-          else if(cpu==4){
-              cout<<"Player 2 counters the spc. Attack and deals 4 DMG"
-                      " to Player 1 "<<endl;
-          hp1=hp1-4;
-          spcCP++;// adds counter to player ever though it was blocked
-          }
-          break;
+                c1(hp1);
+                hpc=hpc-4;
+                spcCP++;// adds counter to player
+                }
+            else if(cpu==2){
+                    cout<<"both players hit hard for 4 GMG"<<endl;
+                hp1=hp1-4;
+                hpc=hpc-4;
+                spcCP++;// adds counter to player
+                spcCC++;// adds counter to cpu
+                }
+            else if(cpu==3){
+                   cout<<"Player 2 blocks 2 DMG form Player 1 power hit"<<endl;
+                   hpc=hpc-2;
+                   spcCP++;// adds counter to player
+                }
+            else if(cpu==4){
+                    cout<<"Player 2 counters the spc. Attack and deals 4 DMG"
+                            " to Player 1 "<<endl;
+                hp1=hp1-4;
+                spcCP++;// adds counter to player ever though it was blocked
+                }
+            break;
           
           
           case 3: //player one blocks 
@@ -1387,7 +1381,7 @@ void chal(){
               if(cpu==1){
                 cout<<"Player 1 misses the counter and "
                         "takes 2 DMG form player 2"<<endl;
-          hp1=hp1-2;
+          c1(hp1);
           }
           else if(cpu==2){
               cout<<"Player 1 counters the massive blow and deals 4 DMG to "
@@ -1432,11 +1426,11 @@ void chal(){
           
           case 1:  //both are out of spc. player one punches
             
-              if(cpu==1){
+        if(cpu==1){
               cout<<"Both players punch each other dealing 2 DMG."<<endl;
-          hp1=hp1-2;
-          hpc=hpc-2;
-          }
+                c1(hp1);
+                hpc=hpc-2;
+                }
           else if(cpu==2){
               cout<<"Player 2 is out of spc. moves"<<endl;//incase computer 
               //inputs a spc. move.
@@ -1489,7 +1483,7 @@ void chal(){
               
               if(cpu==1){
               cout<<"Player 2 hits for 2 DMG"<<endl;
-              hp1=hp1-2;
+              c1(hp1);
           }
          else if(cpu==2){
               cout<<"Player 2 is out of spc. moves"<<endl;
@@ -1525,17 +1519,17 @@ void chal(){
       switch (player[count][thir]){
           case 1:  //player one is out and punches
               
-              if(cpu==1){
-              cout<<"Both players punch each other dealing 2 DMG."<<endl;
-          hp1=hp1-2;
-          hpc=hpc-2;
+            if(cpu==1){
+                cout<<"Both players punch each other dealing 2 DMG."<<endl;
+                c1(hp1);
+                hpc=hpc-2;
           }
           else if(cpu==2){
-             cout<<"Player 1 hits for 2 DMG"
+                cout<<"Player 1 hits for 2 DMG"
                      " and Player 2 hits hard for 4 DMG"<<endl;
-          hp1=hp1-4;
-          hpc=hpc-2;
-          spcCC++;
+                hp1=hp1-4;
+                hpc=hpc-2;
+                spcCC++;
           }
           else if(cpu==3){
               cout<<"Player 2 blocks the DMG form Player 1"<<endl;
@@ -1592,7 +1586,7 @@ void chal(){
               if(cpu==1){
               cout<<"Player 1 misses the counter as"
                       " Player 2 hits player one for 2 DMG"<<endl;
-              hp1=hp1-2;
+              c1(hp1);
           }
           else if(cpu==2){
               cout<<"Player 1 counters the massive blow and deals 4 DMG to "
@@ -1639,7 +1633,7 @@ void chal(){
               
               if(cpu==1){
               cout<<"Both players punch each other dealing 2 DMG."<<endl;
-          hp1=hp1-2;
+          c1(hp1);
           hpc=hpc-2;
           }
           else if(cpu==2){
@@ -1659,7 +1653,7 @@ void chal(){
               if(cpu==1){
                 cout<<"Player 1 hits hard for 4 DMG as player 2"
                     " hits for 2 DMG"<<endl;
-          hp1=hp1-2;
+          c1(hp1);
           hpc=hpc-4;
           spcCP=spcCP+1;
           }
@@ -1699,7 +1693,7 @@ void chal(){
           
           case 4:if(cpu==1){
               cout<<"Player one misses the counter attack"<<endl;
-              hp1=hp1-2;
+              c1(hp1);
           }
           else if(cpu==2){
               cout<<"Player 2 is out of counters."<<endl;
@@ -1745,6 +1739,9 @@ void chal(){
         cout<<"Player one stands victorious, but his enemy still stands."<<endl;
         win[count]=win[count]+1;
     }
+    else if (hpc==hp1){
+        cout<<"You both stand strong."<<endl;
+    }
     else{
         cout<<"Player 2 wins, but you still stand."<<endl;
     }
@@ -1760,7 +1757,10 @@ void chal(){
 
 }
 
-//sort the wins
+
+/******************************************************************************
+**************************sort the wins***************************************/
+//
 void mrkSrt1(int a[],int n){
     for(int i=0;i<n-1;i++){
         for(int j=i+1;j<n;j++){
@@ -1771,4 +1771,13 @@ void mrkSrt1(int a[],int n){
             }
         }
     }
+}
+
+/******************************************************************************
+**************************2 Damage to player one******************************/
+
+int c1(int &hp1){    
+        hp1 = hp1 - 2;
+        return hp1;
+
 }
